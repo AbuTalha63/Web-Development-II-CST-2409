@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium</title>
+    <style>
+        table td{
+            border: black solid 2px;
+        }
+        table {
+            border-collapse: collapse;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        input {
+            text-align: right;
+        }
+    </style>
+    <script src="./premium.js"></script>
+
+    <script>
+        function process() {
+            const collateral = document.getElementById("collateral").value;
+            const premium = document.getElementById("premium").value;
+            const duration = document.getElementById("duration").value;
+
+            const rate = rateOfReturn(collateral, premium, duration);
+            console.log(rate)
+
+            const spPremium = document.getElementById("spPremium");
+            spPremium.innerText = rate.annualRateOfReturn;
+        }
+    </script>
+
+</head>
+<body>
+    <table>
+        <caption>Premium <span id="spPremium"></span></caption>
+        <tr>
+            <td><label for="">Collateral: </label></td>
+            <td><input type="number" name="" id="collateral"></td>
+        </tr>
+        <tr>
+            <td><label for="">Premium:</label></td>
+            <td><input type="number" name="" id="premium"></td>
+        </tr>
+        <tr>
+            <td><label for="">Duration: </label></td>
+            <td><input type="number" name="" id="duration"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <center>
+                    <button onclick="process()">Calculate</button>
+                </center>
+            </td>            
+        </tr>
+    </table>
+    <h2>Developer: Usman, Muhammad</h2>
+    <h1>As Salaamu Alaykum</h1>
+    
+</body>
+</html>
