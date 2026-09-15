@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar | Web Dev II</title>
+    <script src="include.js"></script>
+    <style>
+        *{
+            font-size: 6pt;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        div.full-year > div {
+            width: 1.9in;
+            margin: 2px;
+            display: inline-block;
+            height: 1.1in;
+        }
+        div.full-year > div caption {
+            font-size: 10pt;
+            font-weight: bolder;
+        }
+        div.full-year > div td{
+            border: solid black 1px;
+            width: 1.5in;
+        }
+
+
+    </style>
+</head>
+<body style="border-collapse: collapse;">
+    <h1 style="font-size: large; text-align: center;">Developer: Usman, Muhammad</h1>
+    <div class="full-year">
+        <div w3-include-html="september.xml"></div>
+        <div w3-include-html="october.xml"></div>
+        <div w3-include-html="november.xml"></div>
+        <div w3-include-html="december.xml"></div>
+
+        <div w3-include-html="january.xml"></div>
+        <div w3-include-html="february.xml"></div>
+        <div w3-include-html="march.xml"></div>
+        <div w3-include-html="april.xml"></div>
+
+        <div w3-include-html="may.xml"></div>
+        <div w3-include-html="june.xml"></div>
+        <div w3-include-html="july.xml"></div>
+        <div w3-include-html="august.xml"></div>
+
+
+    </div>
+
+    <script>
+        includeHTML();
+    </script>
+</body>
+</html>
