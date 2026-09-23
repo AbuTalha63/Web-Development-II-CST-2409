@@ -1,4 +1,4 @@
-// Developer: Boulet, Jean
+// Developer: Usman, Muhammad
 let tds = [...document.querySelectorAll("td")];
 tds.forEach( e => {  
     if (e.innerText == "")
