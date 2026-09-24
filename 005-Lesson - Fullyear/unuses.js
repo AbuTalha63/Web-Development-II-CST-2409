@@ -1,6 +1,11 @@
 // Developer: Usman, Muhammad
-let tds = [...document.querySelectorAll("td")];
-tds.forEach( e => {  
-    if (e.innerText == "")
-        e.classList.add('unused');
-} );
+
+function markUnused() {
+    let td = [...document.querySelectorAll("td")];
+    td.forEach(e => {
+        if (e.innerText == "")
+            e.classList.add('unused');
+    });
+}
+
+console.log({td})
