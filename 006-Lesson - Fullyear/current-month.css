@@ -1,5 +1,24 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 td {
     border: dashed 1px black;
     width: 1in;
     height: 1in;
+    font-size: 30px;
+    text-align: center;
+}
+td>span{
+    font-size: 15px;
+    display: block;
+}
+td br{
+    /* display: block; */
+    /* margin: 10px; */
+    line-height: 100px;
+}
+
+caption {
+    font-size: 200%;
 }

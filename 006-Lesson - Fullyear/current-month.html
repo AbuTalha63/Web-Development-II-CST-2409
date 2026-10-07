@@ -10,8 +10,22 @@
 </head>
 <body>
     <div w3-include-html="./xml/template.xml"></div>
+    <span id="developer"Usman, Muhammad></span>
     <script>
-        includeHTML();
+        function updateMonth(element) {
+            let caption = element.querySelector("caption");
+            caption.innerText = getMonth();
+            const tds = [...element.querySelectorAll("td")];
+            let firstDay = getFirstDay();
+            let dayNumber = 1;
+            tds.forEach( (e,i) => {
+                if (firstDay <= i)
+                    e.innerHTML = i + dayNumber++ + "<br><span>$100</span>";
+
+            });
+        }
+
+        includeHTML(updateMonth);
     </script>  
 </body>
 </html>
