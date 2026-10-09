@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="current-month.css" type="text/css">
 </head>
 <body>
+    <p>Developer: Usman, Muhammad</p>
     <div w3-include-html="./xml/template.xml"></div>
     <span id="developer"Usman, Muhammad></span>
     <script>
@@ -18,14 +19,14 @@
             const tds = [...element.querySelectorAll("td")];
             let firstDay = getFirstDay();
             let dayNumber = 1;
-            tds.forEach( (e,i) => {
-                if (firstDay <= i)
-                    e.innerHTML = i + dayNumber++ + "<br><span>$100</span>";
-
+            let lastDay = getLastDay();
+            tds.forEach((e,i) => {
+                if (firstDay <= i && lastDay >= dayNumber)
+                e.innerHTML = dayNumber++ + "<span>$100</span>";
             });
         }
 
         includeHTML(updateMonth);
-    </script>  
+    </script>
 </body>
 </html>
