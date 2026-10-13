@@ -77,5 +77,11 @@
             <td></td>
         </tr>
     </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="2">Summary: </td>
+            <td colspan="5">4,922.00</td>
+        </tr>
+    </tfoot>
 </table>
  
