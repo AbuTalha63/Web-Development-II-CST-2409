@@ -14,14 +14,14 @@ function getMonth($month) {
     return months[ monthIndex ];
 }
 
-function getFirstDay() {
-    const x = new Date();
+function getFirstDay($currentDate) {
+    const x = $currentDate ? $currentDate : new Date();
     x.setDate(1);
     return x.getDay();
 }
 
-function getLastDay() {
-    const x = new Date();
+function getLastDay($currentDate) {
+    const x = $currentDate ? $currentDate : new Date(); // ternary operator, uses truthy & falsy
     x.setMonth(x.getMonth() +1);
     x.setDate(0);
     return x.getDate();
