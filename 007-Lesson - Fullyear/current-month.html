@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/include.js"></script>
+    <script src="./current-month.js"></script>
+    <link rel="stylesheet" href="current-month.css" type="text/css">
+</head>
+<body>
+    <div>
+        <div class="column-1" w3-include-html="./xml/template.xml"></div>
+        <div class="column-2" id="months">
+            <h1>Select Months</h1>
+            <ul id="selectMonth"></ul>
+        </div>
+    </div>
+    <p>Developer: Usman, Muhammad</p>
+    
+    <span id="developer"Usman, Muhammad></span>
+
+    <script>
+        function updateMonth(element, $currentDate) {
+            let caption = element.querySelector("caption");
+            caption.innerText = getMonth();
+            const tds = [...element.querySelectorAll("td")];
+            let firstDay = getFirstDay();
+            let dayNumber = 1;
+            let lastDay = getLastDay();
+            tds.forEach((e,i) => {
+                if (firstDay <= i && lastDay >= dayNumber)
+                e.innerHTML = dayNumber++ + "<span>$100</span>";
+            });
+        }
+
+        includeHTML(updateMonth);
+    </script>
+</body>
+</html>
